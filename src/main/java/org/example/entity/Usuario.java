@@ -5,20 +5,20 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "operador")
-public class Operador {
+@Table(name = "usuario")
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idOperador;
+    private Integer idUsuario;
 
-    private String nomeOperador;
-    private String emailOperador;
-    private String loginOperador;
-    private String senhaOperador;
+    private String nomeUsuario;
+    private String emailUsuario;
+    private String loginUsuario;
+    private String senhaUsuario;
 
 
-    private String tipoOperador;
+    private String tipoUsuario;
 
     // true = usuáriou ativo, false = usuário desativado
     private Boolean status;
