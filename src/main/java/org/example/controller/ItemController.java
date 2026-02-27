@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/itens")
 public class ItemController {
@@ -20,22 +21,22 @@ public class ItemController {
     }
 
     @GetMapping
-    public List<Item> findAll(){
+    public List<Item> listarItens(){
         return itemService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Item findById(@PathVariable Integer id){
+    public Item buscarPorId(@PathVariable Integer id){
         return itemService.findById(id);
     }
 
     @PostMapping
-    public Item create(@RequestBody Item item){
+    public Item criarItem(@RequestBody Item item){
         return itemService.save(item);
     }
 
     @PutMapping("/{id}")
-    public Item update(@PathVariable Integer id, @RequestBody Item item){
+    public Item atualizarItem(@PathVariable Integer id, @RequestBody Item item){
         return itemService.update(id, item);
     }
 

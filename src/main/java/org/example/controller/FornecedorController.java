@@ -21,7 +21,7 @@ public class FornecedorController {
 
     //Buscar todas as informações
     @GetMapping
-    public ResponseEntity<List<Fornecedor>> consultarFornecedores () {
+    public ResponseEntity<List<Fornecedor>> listarFornecedores () {
         List<Fornecedor> fornecedores = fornecedorService.findAll();
         if (fornecedores.isEmpty()) {
             return ResponseEntity.noContent().build();

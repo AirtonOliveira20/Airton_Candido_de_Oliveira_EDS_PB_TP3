@@ -26,7 +26,7 @@ public class UsuarioService {
     }
 
     public Usuario save(Usuario Usuario) {
-        // dica: aqui depois você pode criptografar senha antes de salvar
+
         return UsuarioRepository.save(Usuario);
     }
 

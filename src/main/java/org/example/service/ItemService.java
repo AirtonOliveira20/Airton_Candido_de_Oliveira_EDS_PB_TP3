@@ -35,7 +35,7 @@ public class ItemService {
     public Item update(Integer id, Item item){
         Optional<Item> itemDb = itemRepository.findById(id);
         if(itemDb.isPresent()){
-            item.setIdItem(id); // garante que atualiza o registro certo
+            item.setIdItem(id);
             return itemRepository.save(item);
         }
         return null;

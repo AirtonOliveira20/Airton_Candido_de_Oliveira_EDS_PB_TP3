@@ -17,7 +17,7 @@ public class Fornecedor {
     private String cnpjFornecedor;
     private String emailFornecedor;
     private String telefoneFornecedor;
-    //private String idEndereco;
+
 
 
 
